@@ -1,0 +1,33 @@
+.header {
+}
+
+.header__slider {
+  &-item {
+    height: 100vh;
+    background-image: url(../images/header__bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+}
+
+.slider-item__info {
+  position: absolute;
+  right: 80px;
+  bottom: 16px;
+  text-align: right;
+  color: #fff;
+  &-title {
+    font-weight: 800;
+    font-size: 80px;
+    line-height: 86px;
+    text-transform: uppercase;
+  }
+  &-text {
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 86px;
+    text-transform: uppercase;
+  }
+}

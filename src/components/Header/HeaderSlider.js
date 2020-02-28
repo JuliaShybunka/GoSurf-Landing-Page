@@ -1,21 +1,25 @@
 import React from "react";
-import arrowRight from "../images/arrows-right.svg";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import HeaderSliderItem from "./HeaderSliderItem";
 
 class HeaderSlider extends React.Component {
   render() {
+    const settings = {
+      infinite: true,
+      speed: 500,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      fade: true
+    };
     return (
-      <div className="heder__slider-item slider-item">
-        <div className="slider-item__info">
-          <div className="slider-item__info-suptitle suptitle-left">Surf</div>
-          <div className="slider-item__info-title">West Shore</div>
-          <div className="slider-item__info-suptext suptitle-left">
-            Condition
-          </div>
-          <div className="slider-item__info-text">Radical</div>
-          <a href="#" className="slider-item__info-link">
-            <img src={arrowRight} />
-          </a>
-        </div>
+      <div>
+        <Slider {...settings}>
+          <HeaderSliderItem name={"North"} />
+          <HeaderSliderItem name={"South"} />
+          <HeaderSliderItem name={"West"} />
+          <HeaderSliderItem name={"East"} />
+        </Slider>
       </div>
     );
   }
