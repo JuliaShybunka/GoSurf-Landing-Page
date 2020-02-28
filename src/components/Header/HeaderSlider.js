@@ -4,6 +4,7 @@ import "slick-carousel/slick/slick.css";
 import HeaderSliderItem from "./HeaderSliderItem";
 import Previous from "../images/arrows-left.svg";
 import Next from "../images/arrows-right.svg";
+import HeaderSliderBottom from "./HeaderSliderBottom";
 
 class HeaderSlider extends React.Component {
   constructor(props) {
@@ -22,6 +23,15 @@ class HeaderSlider extends React.Component {
 
   render() {
     const settings = {
+      customPaging: function(i) {
+        return (
+          <>
+            <HeaderSliderBottom />
+          </>
+        );
+      },
+      dots: true,
+      dotsClass: "slick-dots slick-thumb",
       infinite: true,
       speed: 500,
       slidesToShow: 1,
